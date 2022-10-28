@@ -2,37 +2,31 @@ package homeWorkDay8;
 
 public class Sort {
 	public static void main(String[] args) {
-		int[] array = { 0, 0, 2, 0, 1, 2, 0, 2 };
+		int[] array = { 0, 0, 2, 0, 1, 2, 0, 2,1 };
 		int[] sortedArray = sort(array);
 		for (int i : sortedArray) {
 			System.out.println(i);
 		}
-
 	}
-
 	public static int[] sort(int[] array) {
 		int[] count = new int[2]; // 1step
-		int[] sortedArray = new int[array.length]; // 1step
-		
-		for (int i = 0; i < array.length; i++) { //n step
+		int[] sortedArray = new int[array.length]; // 1step	
+		for (int i = 0; i < array.length; i++) { //n steps
 			if (array[i] == 0) {
 				count[0]++;
 			} else if (array[i] == 1) {
 				count[1]++;
 			}
-
 		}
-
-		for (int j = 0; j < count[0]; j++) { //n step
+		for (int j = 0; j < count[0]; j++) { //n steps
 			sortedArray[j] = 0;
 		}
-		for (int k = count[0]; k < count[0] + count[1]; k++) { //n step
+		for (int k = count[0]; k < count[0] + count[1]; k++) { //n steps
 			sortedArray[k] = 1;
 		}
-		for (int l = count[0] + count[1]; l < sortedArray.length; l++) { //n step
+		for (int l = count[0] + count[1]; l < sortedArray.length; l++) { //n steps
 			sortedArray[l] = 2;
 		}
-
 		return sortedArray; //1 step
 	}
 									//time complexity -> O(n)
