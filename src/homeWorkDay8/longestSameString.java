@@ -48,4 +48,4 @@ public class longestSameString {
 		}
 		return shortestLength; //1step
 	}
-}
+}																//time complexity -> O(n)

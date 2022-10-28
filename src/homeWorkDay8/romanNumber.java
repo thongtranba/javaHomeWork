@@ -12,7 +12,7 @@ public class romanNumber {
 		input.close();
 	}
 
-	public static int convertRomanNumberToInteger(String romanNumber) {
+	public static int convertRomanNumberToInteger(String romanNumber) {				//time complexity -> O(n)
 		int[] numbers = new int[romanNumber.length()]; // 1 step
 		for (int i = 0; i < romanNumber.length(); i++) { // n steps
 			numbers[i] = convertToInteger(romanNumber.charAt(i)); 

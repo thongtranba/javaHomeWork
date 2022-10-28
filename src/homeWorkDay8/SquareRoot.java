@@ -27,7 +27,7 @@ public class SquareRoot {
 					squareRoot = i;	//1 step
 					flag = true;	//1 step
 				} else if (i * i > number) {
-					squareRoot = Calculating(number, i - 1, i); //1 step
+					squareRoot = Calculating(number, i - 1, i); //n steps
 					flag = true; //1 step
 				}
 				i++; //1 step
@@ -36,6 +36,7 @@ public class SquareRoot {
 
 		return squareRoot; //1 step
 	}
+	
 
 	static double Calculating(double number, double x, double y) {
 		double avgNumber = (x + y) / 2; //1 step
